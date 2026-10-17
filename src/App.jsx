@@ -1,17 +1,18 @@
+import { Print } from "./components/Print"
 
-function printName(){
-  console.log("anshu");
+let user = {
+  name : "anshu",
+  age : 19
 }
-let age = 12;
-function App() {
 
+function App(){
+  let {name,age} = user
   return (
     <>
-      <div>hello</div>
-      <button onClick={printName}>click on me</button>
-      <p>{age>=18 ? "eligible" : "not eligible"}</p>
+          <Print name={name} age = {age} />
+
     </>
+
   )
 }
-
 export default App

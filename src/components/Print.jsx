@@ -1,8 +1,8 @@
-export function Print({name , age}){
+export function Print({title,price}){
     return (
         <>
-        <h2>{name}</h2>
-        <h2>{age}</h2>
+        <h2>{title}</h2>
+        <h2>{price}</h2>
         </>
     )
 }

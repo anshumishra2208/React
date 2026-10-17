@@ -1,16 +1,36 @@
+import Navbar from "./components/Navbar"
 import { Print } from "./components/Print"
+
+
 
 let user = {
   name : "anshu",
-  age : 19
+  isLoggedIn  : true
 }
 
+
+let products = [
+  {
+    title : "iphone",
+    price : 5802
+  },
+
+  {
+    title : "laptop",
+    price : 480325
+  }
+]
+
 function App(){
-  let {name,age} = user
   return (
     <>
-          <Print name={name} age = {age} />
-
+      {
+        products.map(({title,price})=>{
+          return <Print title={title} price={price}/>
+        })
+      }
+      
+      <Navbar name={user.name} isLoggedIn={user.isLoggedIn}/>
     </>
 
   )
